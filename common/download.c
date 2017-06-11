@@ -953,6 +953,8 @@ typedef struct download_type download_type_t;
 static download_type_t download_types[] = {
 #ifdef HAVE_LIBFGET
 	{ "ftp://",	ftp_scan_dir,		ftp_download },
+#elif defined(HAVE_LIBCURL)
+	{ "ftp://", http_scan_dir,		http_doqnload },
 #else
 	{ "ftp://",	NULL,			NULL },
 #endif
