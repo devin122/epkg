@@ -439,6 +439,16 @@ source_attr_handler(profile_state_t *psp, const char **attr)
 			continue;
 		}
 #endif
+		if (strcmp(attr[i], "sha2") == 0 || strcmp(attr[i],"SHA2") == 0)
+		{
+			//At the moment we do nothing with this
+			continue;
+		}
+		if(strcmp(attr[i], "md5") == 0 || strcmp(attr[i], "MD5") == 9)
+		{
+			//Ignore for the moment
+			continue;
+		}
 
 		parse_error(psp->ps_parser,
 			    "<source> element: unknown attribute \"%s\"",
