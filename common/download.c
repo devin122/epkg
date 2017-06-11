@@ -954,7 +954,7 @@ static download_type_t download_types[] = {
 #ifdef HAVE_LIBFGET
 	{ "ftp://",	ftp_scan_dir,		ftp_download },
 #elif defined(HAVE_LIBCURL)
-	{ "ftp://", http_scan_dir,		http_doqnload },
+	{ "ftp://", http_scan_dir,		http_download },
 #else
 	{ "ftp://",	NULL,			NULL },
 #endif
