@@ -68,10 +68,10 @@ mkencap_create_file(char *file, char *text,
 
 	if (mode == (mode_t)-1)
 		mode = 0644;
-	if (uid == (uid_t)-1)
-		uid = 0;
-	if (gid == (gid_t)-1)
-		gid = 0;
+	//if (uid == (uid_t)-1)
+	//	uid = 0;
+	//if (gid == (gid_t)-1)
+	//	gid = 0;
 
 	fd = mkencap_open_outfile(file);
 	if (fd == -1)
